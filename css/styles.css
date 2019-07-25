@@ -63,25 +63,56 @@ input {
   font-family: inherit;
   font-size: inherit; }
 
+body {
+  font-size: 1em;
+  line-height: 1.5em; }
+  body h1 {
+    line-height: 1.25em; }
+  @media (min-width: 64em) {
+    body {
+      font-size: 1.2em;
+      line-height: 1.8em; } }
+  @media (min-width: 85.375em) {
+    body {
+      font-size: 1.3em; } }
+  @media (min-width: 120em) {
+    body {
+      font-size: 1.4em; } }
+  @media (min-width: 160em) {
+    body {
+      font-size: 1.6em; } }
+
 .row {
   display: flex;
   flex-flow: row nowrap; }
 
 .container {
-  width: 10005.5%;
-  margin-right: 0.5%;
-  float: left;
-  float: none; }
+  margin: 0 4%; }
+  @media (min-width: 64em) {
+    .container {
+      margin: 0 8%; } }
+  @media (min-width: 85.375em) {
+    .container {
+      margin: 0 12%; } }
+  @media (min-width: 120em) {
+    .container {
+      margin: 0 18%; } }
 
 .section {
-  width: 10005.5%;
-  margin-right: 0.5%;
-  float: left;
-  margin: 1.5em; }
+  width: 56.8em;
+  margin-right: 0.8em;
+  float: left; }
+  .section:before, .section:after {
+    display: table;
+    content: ""; }
+  .section:after {
+    clear: both; }
+  .section {
+    zoom: 1; }
 
 .divider {
-  width: 10005.5%;
-  margin-right: 0.5%;
+  width: 56.8em;
+  margin-right: 0.8em;
   float: left;
   height: 1px;
   background-color: rgba(233, 233, 233, 0.836);
