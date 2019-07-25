@@ -1,0 +1,49 @@
+@import 'reset';
+
+$column-width: percentage(100/12);
+$gutter-width: 10px;
+
+
+
+@mixin grid($span) {
+    width: ($column-width * $span) + ($gutter-width * ($span - 1));
+    margin-right: $gutter-width;
+    float: left;
+}
+
+@mixin clearfix{
+    &:before,&:after{
+        display: table;
+        content: "";
+    }
+
+    &:after{
+        clear: both;
+    }
+
+    &{
+        zoom: 1;
+    }
+}
+
+.row{
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.container{
+    @include grid(12);
+    float: none;
+}
+
+.section{
+    @include grid(12);
+    margin: 1.5em;
+}
+
+.divider{
+    @include grid(12);
+    height: 1px;
+    background-color: rgba(233, 233, 233, 0.836);
+    float: none;
+}
